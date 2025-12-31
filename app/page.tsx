@@ -8,7 +8,7 @@ export default function Home() {
   const loginUrl = buildCASLoginUrl(casServerUrl, serviceUrl);
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-4 bg-[#0a0a0a]">
+    <main className="min-h-screen flex flex-col items-center justify-center gap-3 p-4 bg-[#0a0a0a]">
       <Link
         href={loginUrl}
         className="px-6 py-2.5 rounded border border-[#262626] text-[#fafafa] text-sm font-medium transition-colors hover:bg-[#141414] hover:border-[#404040]"
@@ -16,6 +16,7 @@ export default function Home() {
       >
         Login with GT SSO
       </Link>
+      <p className="text-[#666] text-xs">Required to verify GT student status.</p>
     </main>
   );
 }
